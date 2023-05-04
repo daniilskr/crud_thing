@@ -1,0 +1,23 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "vendor_fixes/choices.scss";
+@import "../../node_modules/choices.js/src/styles/choices.scss";
+
+.header-navbar::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: block;
+    content: "";
+}
+
+.header-navbar.backoffice-navbar {
+    background-image: linear-gradient(rgb(211 255 253), rgb(218 255 250 / 95%));
+}
+
+.header-navbar.catalog-navbar {
+    border-bottom: 1px solid rgb(107, 107, 107);
+}
+
+.header-navbar .nav-link.active {
+    color: #6857ff;
+}

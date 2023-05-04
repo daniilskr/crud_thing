@@ -1,0 +1,1 @@
+<a class="link-offset-2 link-underline link-underline-opacity-10" {{ $attributes->only('href') }}>{{ $slot }}</a>
