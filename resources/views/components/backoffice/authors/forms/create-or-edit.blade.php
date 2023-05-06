@@ -9,7 +9,7 @@
             class="mb-3"
             id="author_fullname_input"
             name="fullname"
-            label="Full Name"
+            label="{{ __('views/components/backoffice/authors/forms/create_or_edit.labels.full_name') }}"
             :value="$getAuthorFullname()"
         />
         <button type="submit" class="btn btn-primary">{{ __('views/components/backoffice/authors/forms/create_or_edit.submit') }}</button>

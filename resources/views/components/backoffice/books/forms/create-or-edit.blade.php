@@ -13,14 +13,14 @@
             :selectedValue="$selectedAuthorId"
             valueColumn="id"
             labelColumn="fullname"
-            label="Full Name"
+            label="{{ __('views/components/backoffice/books/forms/create_or_edit.labels.author') }}"
             placeholderLabel="Pick an author"
         />
         <x-forms.inputs.text  
             class="mb-3"
             id="book_title_input"
             name="title"
-            label="Title"
+            label="{{ __('views/components/backoffice/books/forms/create_or_edit.labels.title') }}"
             :value="$getBookTitle()"
         />
         <button type="submit" class="btn btn-primary">{{ __('views/components/backoffice/books/forms/create_or_edit.submit') }}</button>
