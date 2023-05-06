@@ -9,7 +9,7 @@
             <th scope="col">Actions</th>
         </thead>
         <tbody>
-            @foreach($books as $book)
+            @forelse($books as $book)
             <tr>
                 <th scope="row">{{ $loop->iteration	}}</th>
                 <td><x-link href="{{ $getShowUrl($book) }}">{{ $book->title }}</x-link></td>
@@ -19,7 +19,13 @@
                     <x-buttons.crud.delete action="{{ $getDestroyUrl($book) }}" />
                 </td>
             </tr>
-            @endforeach
+            @empty
+            <tr>
+                <td colspan="4" role="cell">
+                    <div class="text-center my-2">There are no books, but you always can create one</div>
+                </td>
+            </tr>
+            @endforelse
         </tbody>
     </table>
     <div class="mt-3">

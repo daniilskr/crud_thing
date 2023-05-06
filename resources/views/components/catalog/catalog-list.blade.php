@@ -1,5 +1,5 @@
 <div>
-    @foreach($authors as $author)
+    @forelse($authors as $author)
     <div class="mb-3">
         <h1>{{ $author->fullname }}</h1>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -17,5 +17,9 @@
             @endforelse
         </div>
     </div>
-    @endforeach
+    @empty
+    <div class="mb-3 text-center">
+        <h5>Sadly we have nothing in our catalog...</h5>
+    </div>
+    @endforelse
 </div>

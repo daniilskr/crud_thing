@@ -9,7 +9,7 @@
             <th scope="col">Actions</th>
         </thead>
         <tbody>
-            @foreach($authors as $author)
+            @forelse($authors as $author)
             <tr>
                 <th scope="row">{{ $loop->iteration	}}</th>
                 <td><x-link href="{{ $getShowUrl($author) }}">{{ $author->fullname }}</x-link></td>
@@ -19,7 +19,13 @@
                     <x-buttons.crud.delete action="{{ $getDestroyUrl($author) }}" />
                 </td>
             </tr>
-            @endforeach
+            @empty
+            <tr>
+                <td colspan="4" role="cell">
+                    <div class="text-center my-2">There are no authors, but you always can create one</div>
+                </td>
+            </tr>
+            @endforelse
         </tbody>
     </table>
     <div class="mt-3">
