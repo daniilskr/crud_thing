@@ -7,4 +7,7 @@ return [
         'author' => 'Автор',
         'title' => 'Название',
     ],
+    'inputs' => [
+        'pick_an_author' => 'Выберите автора',
+    ],
 ];

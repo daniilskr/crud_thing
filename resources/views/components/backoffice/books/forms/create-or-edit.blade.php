@@ -14,7 +14,7 @@
             valueColumn="id"
             labelColumn="fullname"
             label="{{ __('views/components/backoffice/books/forms/create_or_edit.labels.author') }}"
-            placeholderLabel="Pick an author"
+            placeholderLabel="{{ __('views/components/backoffice/books/forms/create_or_edit.inputs.pick_an_author') }}"
         />
         <x-forms.inputs.text  
             class="mb-3"
