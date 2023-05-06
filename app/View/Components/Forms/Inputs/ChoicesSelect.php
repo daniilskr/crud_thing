@@ -33,7 +33,7 @@ class ChoicesSelect extends Component
 
     public function getModelValue(Model $model): mixed
     {
-        return true;
+        return $model->getAttribute($this->valueColumn);
     }
 
     public function getModelLabel(Model $model): string
