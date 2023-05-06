@@ -35,7 +35,7 @@ class BooksController extends Controller
         }
 
         return redirect()->back()->with([
-            'message_fail' => 'Failed to save the book.',
+            'message_fail' => __('controllers/books.failed_to_save_the_book'),
         ]);
     }
 
@@ -69,7 +69,7 @@ class BooksController extends Controller
         }
 
         return redirect()->back()->with([
-            'message_fail' => 'Failed to update the book.',
+            'message_fail' => __('controllers/books.failed_to_update_the_book'),
         ]);
     }
 
@@ -80,12 +80,12 @@ class BooksController extends Controller
     {
         if ($book->delete()) {
             return redirect()->back()->with([
-                'message_destroyed' => "$book->title was removed.",
+                'message_destroyed' => __('controllers/books.book_was_removed', ['title' => $book->title]),
             ]);
         }
 
         return redirect()->back()->with([
-            'message_fail' => 'Failed to delete the book.',
+            'message_fail' => __('controllers/books.failed_to_delete_the_book'),
         ]);
     }
 }

@@ -4,9 +4,9 @@
     <table class="table">
         <thead>
             <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
-            <th scope="col">Actions</th>
+            <th scope="col">{{ __('views/components/backoffice/books/tables/index.columns.title') }}</th>
+            <th scope="col">{{ __('views/components/backoffice/books/tables/index.columns.author') }}</th>
+            <th scope="col">{{ __('views/components/backoffice/books/tables/index.columns.actions') }}</th>
         </thead>
         <tbody>
             @forelse($books as $book)
@@ -22,13 +22,13 @@
             @empty
             <tr>
                 <td colspan="4" role="cell">
-                    <div class="text-center my-2">There are no books, but you always can create one</div>
+                    <div class="text-center my-2">{{ __('views/components/backoffice/books/tables/index.there_are_no_books') }}</div>
                 </td>
             </tr>
             @endforelse
         </tbody>
     </table>
     <div class="mt-3">
-        <x-buttons.crud.new href="{{ $getCreateUrl() }}">New Book</x-buttons.crud.new>
+        <x-buttons.crud.new href="{{ $getCreateUrl() }}">{{ __('views/components/backoffice/books/tables/index.new_book') }}</x-buttons.crud.new>
     </div>
 </div>

@@ -4,9 +4,9 @@
     <table class="table">
         <thead>
             <th scope="col">#</th>
-            <th scope="col">Full Name</th>
-            <th scope="col">Books</th>
-            <th scope="col">Actions</th>
+            <th scope="col">{{ __('views/components/backoffice/authors/tables/index.columns.full_name') }}</th>
+            <th scope="col">{{ __('views/components/backoffice/authors/tables/index.columns.books') }}</th>
+            <th scope="col">{{ __('views/components/backoffice/authors/tables/index.columns.actions') }}</th>
         </thead>
         <tbody>
             @forelse($authors as $author)
@@ -22,13 +22,13 @@
             @empty
             <tr>
                 <td colspan="4" role="cell">
-                    <div class="text-center my-2">There are no authors, but you always can create one</div>
+                    <div class="text-center my-2">{{ __('views/components/backoffice/authors/tables/index.there_are_no_authors') }}</div>
                 </td>
             </tr>
             @endforelse
         </tbody>
     </table>
     <div class="mt-3">
-        <x-buttons.crud.new href="{{ $getCreateUrl() }}">New Author</x-buttons.crud.new>
+        <x-buttons.crud.new href="{{ $getCreateUrl() }}">{{ __('views/components/backoffice/authors/tables/index.new_author') }}</x-buttons.crud.new>
     </div>
 </div>

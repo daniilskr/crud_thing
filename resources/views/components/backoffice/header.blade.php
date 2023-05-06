@@ -1,6 +1,6 @@
 <header class="navbar navbar-expand-lg header-navbar backoffice-navbar sticky-top">
     <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
-        <a class="navbar-brand" href="#">BACKOFFICE</a>
+        <a class="navbar-brand" href="#">{{ __('views/components/backoffice/header.backoffice') }}</a>
         <div class="d-flex gap-3">
             @foreach($getLinks() as $link_name => $link_route_name)
                 @if($isCurrentRoute($link_route_name))

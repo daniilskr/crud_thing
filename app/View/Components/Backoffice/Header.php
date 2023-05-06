@@ -20,9 +20,9 @@ class Header extends Component
     public function getLinks(): array
     {
         return [
-            'Books' => 'backoffice.books.index',
-            'Authors' => 'backoffice.authors.index',
-            'Go to Frontoffice' => 'catalog', 
+            __('components/backoffice/header.getlinks.books') => 'backoffice.books.index',
+            __('components/backoffice/header.getlinks.authors') => 'backoffice.authors.index',
+            __('components/backoffice/header.getlinks.go_to_frontoffice') => 'catalog', 
         ];
     }
 

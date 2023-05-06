@@ -19,7 +19,7 @@ class Header extends Component
     public function getLinks(): array
     {
         return [
-            'Go to Backoffice' => 'backoffice.books.index',
+            __('components/catalog/header.getlinks.go_to_backoffice') => 'backoffice.books.index',
         ];
     }
 

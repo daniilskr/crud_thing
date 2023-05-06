@@ -37,7 +37,7 @@ class AuthorsController extends Controller
         }
 
         return redirect()->back()->with([
-            'message_fail' => 'Failed to save the author.',
+            'message_fail' => __('controllers/authors.failed_to_save_the_author'),
         ]);
     }
 
@@ -71,7 +71,7 @@ class AuthorsController extends Controller
         }
 
         return redirect()->back()->with([
-            'message_fail' => 'Failed to update the author.',
+            'message_fail' => __('controllers/authors.failed_to_update_the_author'),
         ]);
     }
 
@@ -82,12 +82,12 @@ class AuthorsController extends Controller
     {
         if ($author->delete()) {
             return redirect()->back()->with([
-                'message_destroyed' => "$author->fullname was removed.",
+                'message_destroyed' => __('controllers/authors.author_was_removed', ['fullname' => $author->fullname]),
             ]);
         }
 
         return redirect()->back()->with([
-            'message_fail' => 'Failed to delete the author.',
+            'message_fail' => __('controllers/authors.failed_to_delete_the_author'),
         ]);
     }
 }

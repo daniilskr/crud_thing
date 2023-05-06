@@ -13,13 +13,13 @@
                     </div>
                 </div>
             @empty
-                <p>Author has no books...</p>
+                <p>{{ __('views/components/catalog/catalog_list.author_has_no_books') }}</p>
             @endforelse
         </div>
     </div>
     @empty
     <div class="mb-3 text-center">
-        <h5>Sadly we have nothing in our catalog...</h5>
+        <h5>{{ __('views/components/catalog/catalog_list.we_have_nothing_in_our_catalog') }}</h5>
     </div>
     @endforelse
 </div>

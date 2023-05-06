@@ -23,9 +23,9 @@
             label="Title"
             :value="$getBookTitle()"
         />
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{ __('views/components/backoffice/books/forms/create_or_edit.submit') }}</button>
     </form>
     <div class="mt-3 text-end">
-        <a class="link" href="{{ $getIndexUrl() }}">Back to the books list</a>
+        <a class="link" href="{{ $getIndexUrl() }}">{{ __('views/components/backoffice/books/forms/create_or_edit.back_to_the_authors_list') }}</a>
     </div>
 </div>
